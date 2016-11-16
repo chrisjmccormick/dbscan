@@ -57,5 +57,8 @@ for i in range(0, len(skl_labels)):
     if not skl_labels[i] == my_labels[i]:
         print 'Scikit learn:', skl_labels[i], 'mine:', my_labels[i]
         num_disagree += 1
-        
-print 'Number of labels that don\'t match between the two implementations:', num_disagree
+
+if num_disagree == 0:
+    print 'PASS - All labels match!'
+else:
+    print 'FAIL -', num_disagree, 'labels don\'t match.'        
